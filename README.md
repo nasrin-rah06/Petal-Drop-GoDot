@@ -1,6 +1,6 @@
 # Petal-Drop-GoDot
-High School Game Project 'Petal Drop' built with GoDot Game Engine (2D).
+This project is a GODOT Game Engine adaptation of the previous High School Python Tkinter Game Project of "Petal Drop" which was made in 2023. This adaptation has been created in 2025.
 
-GoDot Project node codes in "main.gd", "game.gd".
+GoDot node scripts can be found in "main.gd", "game.gd" and "global.gd".
 
-Fonts available in "fonts" folder and petal images in "petals" folder
+Fonts used are available in "fonts" folder and petal images in "petals" folder.
