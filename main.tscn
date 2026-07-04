@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://d37f8ccivsicc"]
+
+[ext_resource type="Script" uid="uid://dgtyvni2xdm4y" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="FontFile" uid="uid://biem12ncpfhya" path="res://fonts/RubikMarkerHatch-Regular.ttf" id="2_0xm2m"]
+[ext_resource type="FontFile" uid="uid://chr2upkpxhjtn" path="res://fonts/SourGummy-VariableFont_wdth,wght.ttf" id="3_h2yge"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ig7tw")
+
+[node name="TitleLabel" type="Label" parent="."]
+z_index = 5
+offset_left = 271.0
+offset_top = 129.0
+offset_right = 914.0
+offset_bottom = 270.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
+theme_override_font_sizes/font_size = 100
+text = "PETAL DROP"
+horizontal_alignment = 1
+
+[node name="NameInput" type="LineEdit" parent="."]
+offset_left = 406.0
+offset_top = 338.0
+offset_right = 796.0
+offset_bottom = 389.0
+placeholder_text = "Enter Name"
+alignment = 1
+
+[node name="NameLabel" type="Label" parent="."]
+offset_left = 448.0
+offset_top = 401.0
+offset_right = 625.0
+offset_bottom = 450.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayButton" type="Button" parent="."]
+offset_left = 519.0
+offset_top = 465.0
+offset_right = 668.0
+offset_bottom = 524.0
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 30
+text = "PLAY"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]

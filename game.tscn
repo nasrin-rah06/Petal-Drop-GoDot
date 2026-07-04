@@ -1,0 +1,125 @@
+[gd_scene load_steps=4 format=3 uid="uid://yj4x23wytjrn"]
+
+[ext_resource type="Script" uid="uid://dykdawrw07tqe" path="res://game.gd" id="1_80nbo"]
+[ext_resource type="FontFile" uid="uid://chr2upkpxhjtn" path="res://fonts/SourGummy-VariableFont_wdth,wght.ttf" id="2_e2o6t"]
+[ext_resource type="Texture2D" uid="uid://dewg2uln48t2j" path="res://petals/petal_5.png" id="3_feb5d"]
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 373.0
+offset_top = 265.0
+offset_right = 373.0
+offset_bottom = 265.0
+script = ExtResource("1_80nbo")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+offset_left = -371.0
+offset_top = -264.0
+offset_right = 779.0
+offset_bottom = 381.0
+color = Color(0.790659, 0.888892, 1, 1)
+
+[node name="PlayerNameLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = -350.0
+offset_top = -242.0
+offset_right = -246.0
+offset_bottom = -200.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_e2o6t")
+theme_override_font_sizes/font_size = 30
+text = "Player:"
+
+[node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = -352.0
+offset_top = -178.0
+offset_right = -264.0
+offset_bottom = -139.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_e2o6t")
+theme_override_font_sizes/font_size = 30
+text = "Score:"
+
+[node name="FruitsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 484.0
+offset_top = -128.0
+offset_right = 648.0
+offset_bottom = -88.0
+theme_override_fonts/font = ExtResource("2_e2o6t")
+theme_override_font_sizes/font_size = 24
+text = "FRUITS"
+
+[node name="ProgrammingButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 484.0
+offset_top = -66.0
+offset_right = 649.0
+offset_bottom = -24.0
+theme_override_fonts/font = ExtResource("2_e2o6t")
+theme_override_font_sizes/font_size = 22
+text = "PROGRAMMING"
+
+[node name="AnimalsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 485.0
+offset_top = -2.0
+offset_right = 650.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("2_e2o6t")
+theme_override_font_sizes/font_size = 24
+text = "ANIMALS"
+
+[node name="PetalImage" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -23.0
+offset_top = -202.0
+offset_right = 377.0
+offset_bottom = 198.0
+texture = ExtResource("3_feb5d")
+
+[node name="WordLabel" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 21.0
+offset_top = 212.0
+offset_right = 331.0
+offset_bottom = 258.0
+theme_override_fonts/font = ExtResource("2_e2o6t")
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GuessInput" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 283.0
+offset_right = 135.0
+offset_bottom = 325.0
+placeholder_text = "enter"
+alignment = 1
+
+[node name="GuessButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 282.0
+offset_right = 247.0
+offset_bottom = 324.0
+theme_override_fonts/font = ExtResource("2_e2o6t")
+theme_override_font_sizes/font_size = 20
+text = "Guess"
+
+[node name="Popup" type="AcceptDialog" parent="."]
+title = "PETAL DROP"
+size = Vector2i(172, 100)
+ok_button_text = "fine"
+dialog_text = "LISTEN UP"
+
+[connection signal="pressed" from="FruitsButton" to="." method="_on_fruits_button_pressed"]
+[connection signal="pressed" from="ProgrammingButton" to="." method="_on_programming_button_pressed"]
+[connection signal="pressed" from="AnimalsButton" to="." method="_on_animals_button_pressed"]
+[connection signal="pressed" from="GuessButton" to="." method="_on_guess_button_pressed"]
